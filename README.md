@@ -58,7 +58,26 @@ GEMINI_API_KEY=your_gemini_api_key_here
 AI_PROVIDER=gemini
 ```
 
-### 4. Setup Prisma ORM
+### 4. Setup ShadCN UI
+
+Initialize ShadCN UI in your project:
+
+```bash
+# Initialize ShadCN UI
+pnpm dlx shadcn-ui@latest init
+
+# Install required ShadCN components (examples)
+pnpm dlx shadcn-ui@latest add button
+pnpm dlx shadcn-ui@latest add input
+pnpm dlx shadcn-ui@latest add card
+pnpm dlx shadcn-ui@latest add avatar
+pnpm dlx shadcn-ui@latest add scroll-area
+
+# Or install multiple components at once
+pnpm dlx shadcn-ui@latest add button input card avatar scroll-area
+```
+
+### 5. Setup Prisma ORM
 
 ```bash
 # Generate Prisma client
@@ -71,7 +90,7 @@ pnpm prisma db push
 pnpm prisma db studio
 ```
 
-### 5. Run the Development Server
+### 6. Run the Development Server
 
 ```bash
 pnpm dev
