@@ -1,66 +1,36 @@
-# 🤖 Chatbot App
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A modern AI chatbot web application powered by **Next.js 14**, **Prisma**, **TailwindCSS**, and **Google Gemini API**. This project uses **SQLite** for local development and Prisma ORM for database interaction.
+## Getting Started
 
----
+First, run the development server:
 
-## 🚀 Features
-
-- ✨ Chat with AI using the Google Gemini API  
-- 🧠 Streaming responses (coming soon)  
-- 🗂️ Chat history stored with Prisma ORM  
-- 🎨 Beautifully styled with TailwindCSS & ShadCN UI  
-- ✅ TypeScript & ESLint support  
-
----
-
-## 🧰 Tech Stack
-
-- **Frontend:** Next.js 14, React 18  
-- **Styling:** TailwindCSS, ShadCN UI, Radix UI  
-- **Backend:** Google Gemini API  
-- **Database:** SQLite  
-- **ORM:** Prisma  
-
----
-
-## 📦 Installation
-
-1. **Clone the repository**  
-   ```bash
-   git clone https://github.com/ChungsiangRoeurn/chatbot-app.git
-   cd chatbot-app
-
-2. **Install Dependencies**
-   ```bash
-   You  can use **pnpm**, **npm**, or **yarn** — choose one that fits your setup.
-   Using pnpm (recommended)
-   pnpm install
-   npm install
-   yarn install
-   
-3. **Setup envivorment**
-   ```bash
-   create google gemini account
-   cp api key to replace
-      GEMINI_API_KEY=**********************
-      AI_PROVIDER="*************************"
-   cp .env.example .env
-
- 4. **Setup PrismaORM**
-   ```bash
-   pnpm prisma generate
-   pnpm prisma db push
-   pnpm prisma db studio (optional)
-
-
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
----
 
-Let me know if you want:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- Example `.env.example` inside the README  
-- Deploy instructions for Vercel or other platforms  
-- To add some badges at the top (MIT, Next.js, etc.)
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-You’re building this like a pro, bro 👑
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
