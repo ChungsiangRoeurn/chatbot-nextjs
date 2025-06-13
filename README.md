@@ -1,36 +1,145 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🤖 Chatbot App
 
-## Getting Started
+A modern AI chatbot web application powered by **Next.js 14**, **Prisma**, **TailwindCSS**, and **Google Gemini API**. This project uses **SQLite** for local development and Prisma ORM for database interaction.
 
-First, run the development server:
+## 🚀 Features
+
+* ✨ Chat with AI using the Google Gemini API
+* 🧠 Streaming responses (coming soon)
+* 🗂️ Chat history stored with Prisma ORM
+* 🎨 Beautifully styled with TailwindCSS & ShadCN UI
+* ✅ TypeScript & ESLint support
+
+## 🧰 Tech Stack
+
+* **Frontend:** Next.js 14, React 18
+* **Styling:** TailwindCSS, ShadCN UI, Radix UI
+* **Backend:** Google Gemini API
+* **Database:** SQLite
+* **ORM:** Prisma
+
+## 📦 Installation
+
+### 1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/ChungsiangRoeurn/chatbot-app.git
+cd chatbot-app
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can use **pnpm**, **npm**, or **yarn** — choose one that fits your setup.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Using pnpm (recommended)
+pnpm install
 
-## Learn More
+# Or using npm
+npm install
 
-To learn more about Next.js, take a look at the following resources:
+# Or using yarn
+yarn install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Setup Environment Variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Create a Google Gemini account and get your API key
+2. Copy the environment variables:
 
-## Deploy on Vercel
+```bash
+cp .env.example .env
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Update your `.env` file with your credentials:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
+AI_PROVIDER=gemini
+```
+
+### 4. Setup Prisma ORM
+
+```bash
+# Generate Prisma client
+pnpm prisma generate
+
+# Push database schema
+pnpm prisma db push
+
+# (Optional) Open Prisma Studio to view your database
+pnpm prisma db studio
+```
+
+### 5. Run the Development Server
+
+```bash
+pnpm dev
+```
+
+Open your browser and go to `http://localhost:3000` (or your configured port).
+
+## 📁 Project Structure
+
+```
+chatbot-app/
+├── prisma/
+│   └── schema.prisma
+├── src/
+│   ├── app/
+│   ├── components/
+│   └── lib/
+├── .env.example
+├── package.json
+└── README.md
+```
+
+## 🌍 Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+# Google Gemini API
+GEMINI_API_KEY=your_gemini_api_key_here
+AI_PROVIDER=gemini
+
+# Database
+DATABASE_URL="file:./dev.db"
+```
+
+## 🚀 Deployment
+
+This project can be deployed on various platforms:
+
+* **Vercel** (recommended for Next.js)
+* **Netlify**
+* **Railway**
+* **Docker**
+
+For production deployment, make sure to:
+1. Set up your environment variables
+2. Use a production database (PostgreSQL, MySQL, etc.)
+3. Update your `DATABASE_URL` accordingly
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+* Google Gemini API for AI capabilities
+* Vercel for the amazing Next.js framework
+* Prisma team for the excellent ORM
+* ShadCN UI for beautiful components
+
+---
+
+Built with ❤️ by [ChungsiangRoeurn](https://github.com/ChungsiangRoeurn)
